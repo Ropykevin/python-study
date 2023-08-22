@@ -32,7 +32,9 @@ print(temp)
 # temp=56.8926 to 8.926 
 # NB: Use string  slice & concatenation, but have result as float 
 temp = 56.8926
-result = str(temp)[:2] + "." + str(temp)[2:5]
-print(result)
-result= float(result)
-print(result)
+result = round(temp,3)
+result1 = str(temp)[3:4]
+result2= str(temp)[4:7]
+finalresult =result1+"."+ result2
+finalresult= float(finalresult)
+print(finalresult)
