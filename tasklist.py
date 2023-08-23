@@ -15,7 +15,6 @@ print(trainees[1][1][0])
 # 3. Using a method add 56 at the end of the list.
 trainees.append(56)
 print(trainees)
-
 # # 4. Using a method add the name Mike between James and Mary.
 print(trainees[1][1].insert(1, "Mike"))
 # # 5. Change the value of 2 to 8.
@@ -29,4 +28,8 @@ print(trainees)
 length = len(trainees)
 print(length)
 
-
+name =["ke","uh","3"]
+gam=["uk","za","tz"]
+nm=["uk","ty","rt"]
+name.extend(gam),name.extend(nm)
+print(name)
