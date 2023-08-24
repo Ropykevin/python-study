@@ -75,7 +75,7 @@ b=[4,'python',2,7,'simplilearn',9]
 4 in b#True
 y={'a':"Kenya",'b':"USA"}
 a in y#True
-Kenya in y #False works only on keys
+"Kenya" in y #False works only on keys
 
 #Bitwise operators(converts to binary then perfoms the bitwise and or operator)
 7&2 #2

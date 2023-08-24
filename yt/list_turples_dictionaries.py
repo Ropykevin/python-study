@@ -168,5 +168,10 @@ dict1.clear()
 print(dict1)#{}
 
 
-
-
+ken =(1,2,3,4,5,6,7,8)
+ken=list(ken)
+print(ken)
+del(ken[2:5])
+print(ken)
+ken=tuple(ken)
+print(ken)
