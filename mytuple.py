@@ -1,0 +1,10 @@
+days_of_the_week=("monday","tuesday","wednesday","thursday","friday","saturday","sunday")
+print(days_of_the_week[5])
+print(days_of_the_week[2:4])
+days_of_the_week=list(days_of_the_week)
+days_of_the_week[3]="Thur"
+days_of_the_week=tuple(days_of_the_week)
+print(days_of_the_week)
+mytup=("kevin")
+print(mytup)
+print(type(mytup))

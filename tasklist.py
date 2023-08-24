@@ -22,7 +22,7 @@ trainees[1][0] = 8
 print(trainees)
 # # 6. Remove John and Mary from the list.
 trainees.remove("John")
-trainees[1][1].remove("Mary")
+del trainees[1][1][2]
 print(trainees)
 # # 7. Using a function, determine the length of the list.
 length = len(trainees)
