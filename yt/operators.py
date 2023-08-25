@@ -63,7 +63,7 @@ x==y#true
 x is y #false
 a=[5,6,3,7,2,9]
 b=[5,6,3,7,1,9]
-c=a#same memory loction
+c=a#same memory location
 print(a is c)
 # True
 
