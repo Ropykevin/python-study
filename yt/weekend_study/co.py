@@ -1,10 +1,9 @@
-class Person :
-    def __init__(self,name):#constructor
-        self.name=name
-    def talk(self):
-        print(f"hi, I am  {self.name} ")
+# write a program to check wheather a person can vote or not
+person_age = 19
+if person_age>=18:
+    print("person can vote")
+else:
+    print("person cannot vote ")
 
-ropy = Person("ropy kevin")
-ropy.talk()
-bob =Person("Bob smith")
-bob.talk()
+
+
