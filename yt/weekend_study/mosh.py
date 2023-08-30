@@ -126,7 +126,7 @@ else:
 #   its a cold day
 # otherwise
 #   it's neither hot nor cold
-#solition
+#solution
 temperature =0
 if temperature>30:
     print("it`s warm")
@@ -599,7 +599,15 @@ for file in path.glob("*.py"):
     print(file)
 
 #Pypi and Pip(Huh?)
+# python package index
+# text messages pypi.org then search sms
+# yelb.com
+#web scripting
+#browser automation
+# celenium
 
+#openpyxl
+# open terminal then pip istall openpyxl
 
 
 
