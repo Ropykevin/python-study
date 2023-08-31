@@ -1,10 +1,7 @@
-# Get the user's input
 basic_salary = float(input("Enter your basic salary: "))
 benefits = float(input("Enter your benefits: "))
-
 # Calculate the gross salary
 gross_salary = basic_salary + benefits
-
 # Calculate NHIF contribution
 if gross_salary <= 5999:
     NHIF_contribution = 150

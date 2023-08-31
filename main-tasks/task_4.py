@@ -3,7 +3,7 @@
 # Hint: In Python you can use logical operators to solve this.
 email = input("Enter your email adress: ")
 valid=""
-if email.index("@")>1 and email.index(".")>email.index("@")+1:
+if email.index("@")>1 and (email.index(".")<len(email)-1) and (email.index(".")>email.index("@")):
     valid=(f"{email} is a valid email")
 else:
     valid=(f"{email} is not a valid email")
