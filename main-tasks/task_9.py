@@ -6,5 +6,9 @@
 #     // ****
 #     // *****.
 rows = int(input("Enter a number: "))
+count=0
 for i in range(1, rows + 1):
-  print("*" * i)
+  value=("*" * i)
+  count=count
+  if count==rows:
+    value=value+("."*i)
