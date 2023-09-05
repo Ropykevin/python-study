@@ -77,3 +77,9 @@ print(p1.phone)
 
 p1.add()
 print(p1.details)
+p2=Person(input("enter name: "),
+          input("enter gender: "),
+          input("enter email: "),
+          input("enter phone-number: "))
+p2.add()
+print(p2.details)
