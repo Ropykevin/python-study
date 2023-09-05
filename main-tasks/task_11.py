@@ -39,23 +39,45 @@ from datetime import datetime
 #     years -= 1
 #     months += 12
 # print(f'You are {years} years, {months} months, and {days} days old.')
+# def find_age():
+#     today=datetime.now()
+#     dob=input("enter DOB(dd-mm-yyyy): ")
+#     sdob=dob.split("-")
+#     if len(sdob) !=3 or int(sdob[0])>31 \
+#         or int (sdob[1])>12 or int (sdob[2])<1900 \
+#         or int (sdob[2])>2023:
+#         result=("wrong date format")
+#     else:
+#         year=today.year - int(sdob[-1])
+#         months=today.month-int(sdob[-2])
+#         days=today.day-int(sdob[-3])
+#         if days < 0:
+#             months -= 1
+#             days += 30
+#         if months < 0:
+#             year -= 1
+#             months += 12
+#         result=(f"{year} years { months} months {days} days")
+#     return result
+# value=find_age()
+# print(value)
+def find_age(today=None,dob=None,):
+    today = datetime.now()
+    dob = input("Enter DOB (dd-mm-yyyy): ")
+    sdob = dob.split("-")
 
-today=datetime.now()
-dob=input("enter DOB(dd-mm-yyyy): ")
-sdob=dob.split("-")
+    if len(sdob) != 3 or int(sdob[0]) > 31 or int(sdob[1]) > 12 or int(sdob[2]) < 1900 or int(sdob[2]) > today.year:
+        result = "Wrong date format"
+    else:
+        dob_date = datetime(day=int(sdob[0]), month=int(sdob[1]), year=int(sdob[2]))
+        age = today - dob_date
+        years = age.days // 365
+        months = (age.days % 365) // 31
+        days = (age.days % 365) % 31
 
-if len(sdob) !=3 or int(sdob[0])>31 \
-    or int (sdob[1])>12 or int (sdob[2])<1900 \
-    or int (sdob[2])>2023:
-    print("wrong date format")
-else:
-    year=today.year - int(sdob[-1])
-    months=today.month-int(sdob[-2])
-    days=today.day-int(sdob[-3])
-    if days < 0:
-        months -= 1
-        days += 30
-    if months < 0:
-        year -= 1
-        months += 12
-    print(f"{year} years { months} months {days} days")
+        result = f"{years} years {months} months {days} days"
+
+    return result
+
+value = find_age()
+print(value)

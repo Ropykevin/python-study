@@ -7,10 +7,13 @@
 num1=int(input("enter number 1:  "))
 num2=int(input("enter number 2:  "))
 num3=int(input("enter number 3:  "))
+def find_largest(num1, num2, num3):
+    if num1 > num2 and num1 > num3:
+        return f"{num1} is largest"
+    elif num2 > num1 and num2 > num3:
+        return f"{num2} is largest"
+    else:
+        return f"{num3} is largest"
 
-if (num1>num2 and num1>num3):
-    print(f"{num1} is largest")
-elif(num2>num1 and num2>num3):
-    print(f"{num2} is largest")
-else:
-    print(f"{num3} is largest")
+result = find_largest(num1, num2, num3)
+print(result)

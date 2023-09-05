@@ -1,11 +1,14 @@
-speed=int(input("enter the speed: "))
-def check_speed(speed):
-  if speed < 70:
-    print("Ok")
-  else:
-    demerit_points = (speed - 70) // 5
-    print("Points:", demerit_points)
-    if demerit_points > 12:
-      print("License suspended")
+speed = int(input("Enter the speed: "))
 
-check_speed(speed)
+def check_speed(speed):
+    if speed < 70:
+        return "Ok"
+    else:
+        demerit_points = (speed - 70) // 5
+        if demerit_points > 12:
+            return "License suspended"
+        else:
+            return "Points: " + str(demerit_points)
+
+result = check_speed(speed)
+print(result)

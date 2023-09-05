@@ -3,18 +3,29 @@
 # The input should be between 0 and 100.Then output the correct grade: 
 # A > 79 , B - 60 to 79, C -  50 to 59, D - 40 to 49, E - less 40
 # *
-marks = int(input(f"Enter student marks {range(0,100)}: "))
-grade=""
-if (marks >= 70 and marks<=100) :
-   grade= "Grade: A"
-elif (marks >= 60 and marks<=79) :
-   grade= "Grade: B"
-elif (marks >= 50 and marks<=59):
-   grade= "Grade: C"
-elif (marks >=40 and marks<=49):
-   grade= "Grade: D"
-elif (marks >= 0 and marks<=40):
-   grade= "Grade: E"
-else :
-   grade="invalid marks"
-print(grade)
+def student_marks():
+    while True:
+        try:
+            marks = int(input("Enter student marks (0-100): "))
+            if 0 <= marks <= 100:
+                break
+            else:
+                print("Marks should be in the range 0-100. Please try again.")
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+
+    if 80 <= marks <= 100:
+        grade = "Grade: A"
+    elif 60 <= marks <= 79:
+        grade = "Grade: B"
+    elif 50 <= marks <= 59:
+        grade = "Grade: C"
+    elif 40 <= marks <= 49:
+        grade = "Grade: D"
+    else:
+        grade = "Grade: E"
+
+    return grade
+
+Grade = student_marks()
+print(Grade)
