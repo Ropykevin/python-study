@@ -50,3 +50,30 @@ class Person:
 
 p1 = Person("John", 36)
 p1.myfunc()
+
+class Person():
+  name=""
+  gender=""
+  emails=""
+  phone=""
+  details=[]
+  #constructor-A special methodused
+  #to instanstiate initial values
+  def __init__(self,n,g,e,p):
+    self.name=n
+    self.gender=g
+    self.emails=e
+    self.phone=p
+  def add (self):
+    self.details.append(self.name)
+    self.details.append(self.gender)
+    self.details.append(self.emails)
+    self.details.append(self.phone)
+p1=Person("ropy","male","ropykevin@gmail.com",+254742670714)
+print(p1.emails)
+print(p1.name)
+print(p1.gender)
+print(p1.phone)
+
+p1.add()
+print(p1.details)
